@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditional Statements</title>
+</head>
+<body>
+    <p id="if">If Statement : <br>
+        <b>Write a program to check whether the number is Greater than 0 or not.</b><br>
+        let num = 5;
+    </p>
+    <script>
+        let num = 5;
+        if(num > 0){
+            document.getElementById("if").innerHTML += "Number is Greater than 0";
+        }
+    </script>
+    <p id="ifelse">If Else Statement : <br>
+        <b>Write a conditional statement to check whether the Person is eligible to vote or not. A person who is eligible to vote must be older than or equal to 18 years old.</b><br>
+        let age = 20;
+    </p>
+    <script>
+        let age = 20;
+        if(age >= 18){
+            document.getElementById("ifelse").innerHTML += "Person is eligible to vote";
+        } else {
+            document.getElementById("ifelse").innerHTML += "Person is not eligible to vote";
+        }
+    </script>
+
+</body>
+</html>

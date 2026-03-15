@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Js Arithmetic Operators</h1>
+    <p id="addition">Addition : 5 + 3 = </p>
+    <p id="subtraction">Subtraction : 5 - 3 = </p>
+    <p id="multiplication">Multiplication : 5 * 3 = </p>
+    <p id="division">Division : 5/3 = </p>
+    <p id="modulus">Modulus : 5 % 3 = </p>
+    <p id="increment">Increment : 5++ = </p>
+    <p id="decrement">Decrement : 5-- = </p>
+    <p id="exponentiation">Exponentiation : 5 ** 3 = </p>
+    <script>
+        let x = 5;
+        let y = 3;
+        let add = x + y;
+        document.getElementById("addition").innerHTML += add;
+
+        let sub = x - y;
+        document.getElementById("subtraction").innerHTML += sub;
+
+        let mul = x * y;
+        document.getElementById("multiplication").innerHTML += mul;
+
+        let div = x / y;
+        document.getElementById("division").innerHTML += div;
+
+        let mod = x % y;
+        document.getElementById("modulus").innerHTML += mod;
+
+        let inc = x++;
+        document.getElementById("increment").innerHTML += inc;
+
+        let dec = x--;
+        document.getElementById("decrement").innerHTML += dec;
+
+        let exp = x ** y;
+        document.getElementById("exponentiation").innerHTML += exp;
+    </script>
+    <h1>JS Assignment Operators</h1>
+    <p id="assign">Assignment : a = 5  : </p>
+    <p id="addAssign">Add and Assignment : a += 3 : </p>
+    <p id="subAssign">Subtract and Assignment : a -= 3 : </p>
+    <p id="mulAssign">Multiply and Assignment : a *= 3 : </p>
+    <p id="divAssign">Divide and Assignment : a /= 3 : </p>
+    <p id="modAssign">Modulus and Assignment : a %= 3 : </p>
+    <p id="expAssign">Exponentiation and Assignment : a **= 3 : </p>
+    <script>
+        let a = 5;
+        document.getElementById("assign").innerHTML += a;
+
+        a += 3;
+        document.getElementById("addAssign").innerHTML += a;
+
+        a -= 3;
+        document.getElementById("subAssign").innerHTML += a;
+
+        a *= 3;
+        document.getElementById("mulAssign").innerHTML += a;
+
+        a /= 3;
+        document.getElementById("divAssign").innerHTML += a;
+
+        a %= 3;
+        document.getElementById("modAssign").innerHTML += a;
+
+        a **= 3;
+        document.getElementById("expAssign").innerHTML += a;
+    </script>
+    <h1>JS Comparison Operators</h1>
+    <p id="equal">Equal : 5 == 3 : </p>
+    <p id="notEqual">Not Equal : 5 != 3 : </p>
+    <p id="strictEqual">Strict Equal : 5 === 3 : </p>
+    <p id="strictNotEqual">Strict Not Equal : 5 !== 3 : </p>
+    <p id="greater">Greater than : 5 > 3 : </p>
+    <p id="less">Less than : 5 < 3 : </p>
+    <p id="greaterEqual">Greater than or Equal to : 5 >= 3 : </p>
+    <p id="lessEqual">Less than or Equal to : 5 <= 3 : </p>
+    <script>
+        let b = 5;
+        let c = 3;
+
+        document.getElementById("equal").innerHTML += (b == c);
+        document.getElementById("notEqual").innerHTML += (b != c);
+        document.getElementById("strictEqual").innerHTML += (b === c);
+        document.getElementById("strictNotEqual").innerHTML += (b !== c);
+        document.getElementById("greater").innerHTML += (b > c);
+        document.getElementById("less").innerHTML += (b < c);
+        document.getElementById("greaterEqual").innerHTML += (b >= c);
+        document.getElementById("lessEqual").innerHTML += (b <= c);
+    </script>
+
+</body>
+</html>
