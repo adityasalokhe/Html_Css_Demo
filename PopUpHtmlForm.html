@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up Html Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div>
+        <h1 class="text-red-100">Welcome to My Form</h1>
+        <p>This is the main page content</p>
+        <div id="mainContent" class="p-20 text-center transition-all duration-300">
+        </div>
+        <!-- MAIN CONTENT -->
+        <div id="mainContent" class="p-20 text-center transition-all duration-300">
+            <h1 class="text-3xl font-bold mb-5">Sign Up/Sign In</h1>
+            <button onclick="openLogin()"
+                class="bg-blue-300 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+                Login
+            </button>
+            <button onclick="openRegister()"
+                class="bg-blue-300 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition ml-4">
+                Register
+            </button>
+        </div>
+        <!-- Login Modal -->
+        <div id="loginModal"
+            class="fixed inset-0 hidden flex items-center justify-center bg-black/40 backdrop-blur-sm transition duration-300">
+            <div
+                class="bg-white w-[750px] rounded-xl shadow-2xl flex overflow-hidden relative transform transition-all duration-300 scale-95">
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeLogin()" class="absolute right-4 top-3 text-gray-500 text-xl">✕</button>
+                <!-- LEFT PANEL -->
+                <div class="w-2/5 bg-gradient-to-b from-blue-700 to-blue-500 text-white p-10">
+                    <h2 class="text-3xl font-bold mb-6">
+                        Login
+                    </h2>
+                    <br><br><br><br><br>
+                    <p class="text-sm opacity-80 mb-6">
+                        Enter Your Details to Access Your Account
+                    </p>
+                </div>
+                <!-- RIGHT FORM -->
+                <div class="w-3/5 p-10">
+                    <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-6">
+                        Enter Your Details
+                    </h3>
+                    <div class="columns-2">
+                        <div>
+                            <input type="text" placeholder="User-Id"
+                                class="w-full border-b border-gray-400 bg-transparent p-2 mb-6 focus:outline-none focus:border-blue-600" />
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password"
+                                class="w-full border-b border-gray-400 bg-transparent p-2 mb-6 focus:outline-none focus:border-blue-600" />
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Register Modal -->
+        <div id="registerModal"
+            class="fixed inset-0 hidden flex items-center justify-center bg-black/40 backdrop-blur-sm transition duration-300">
+            <div class="bg-white w-[750px] rounded-xl shadow-xl flex overflow-hidden relative">
+                <!-- CLOSE BUTTON -->
+                <button onclick="closeRegister()" class="absolute right-4 top-3 text-red-900 text-xl">✕</button>
+                <!-- LEFT PANEL -->
+                <div class="w-1/2 bg-gradient-to-b from-blue-700 to-blue-500 text-white p-10">
+                    <h2 class="text-3xl font-bold mb-6">
+                        Register
+                    </h2>
+                    <p class="text-center text-blue-100 leading-relaxed max-w-xs">
+                        Enter your details to create your account and start accessing all
+                        features of our platform. Join thousands of users today.
+                    </p>
+
+                    <div class="mt-10 space-y-3 text-sm text-blue-100">
+                        <p>✔ Secure Registration</p>
+                        <p>✔ Fast Account Setup</p>
+                        <p>✔ Access Premium Features</p>
+                    </div>
+                </div>
+                <!-- RIGHT FORM -->
+                <div class="w-1/2 p-10">
+                    <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-6">
+                        Enter Your Details
+                    </h3>
+                    <input type="text" placeholder="Enter Full Name" class="w-full border rounded-lg p-3 mb-4" />
+                    <input type="tel" placeholder="Mobile Number" class="w-full border rounded-lg p-3 mb-4" />
+                    <input type="email" placeholder="Email" class="w-full border rounded-lg p-3 mb-4" />
+                    <input type="text" placeholder="Create Password" class="w-full border rounded-lg p-3 mb-4" />
+                    <input type="password" placeholder="Confirm Password" class="w-full border rounded-lg p-3 mb-4" />
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+                        Register
+                    </button>
+                    <p class="text-xs text-gray-400 text-center mt-6">
+                        By registering, you agree to our Terms & Conditions and Privacy Policy
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openLogin() {
+                document.getElementById("loginModal").classList.remove("hidden")
+                document.getElementById("mainContent").classList.add("blur-sm")
+            }
+            function closeLogin() {
+                document.getElementById("loginModal").classList.add("hidden")
+                document.getElementById("mainContent").classList.remove("blur-sm")
+            }
+        </script>
+        <script>
+            function openRegister() {
+                document.getElementById("registerModal").classList.remove("hidden")
+                document.getElementById("mainContent").classList.add("blur-sm")
+            }
+            function closeRegister() {
+                document.getElementById("registerModal").classList.add("hidden")
+                document.getElementById("mainContent").classList.remove("blur-sm")
+            }
+        </script>
+</body>
+
+</html>

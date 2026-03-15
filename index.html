@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Syllabus Demo Website</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#333;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+nav{
+background:#555;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+padding:20px;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+}
+
+img{
+width:300px;
+margin:10px 0;
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>HTML Learning Web Page</h1>
+<p>Basic HTML Concepts Demonstration</p>
+</header>
+
+<nav>
+<a href="#text">Text</a>
+<a href="#lists">Lists</a>
+<a href="#images">Images</a>
+<a href="#table">Table</a>
+<a href="#form">Form</a>
+</nav>
+
+<div class="container">
+
+<div class="section" id="text">
+<h2>Text Formatting</h2>
+<p>This is a <strong>strong</strong> text example.</p>
+<p>This is <em>emphasized</em> text.</p>
+<blockquote>HTML is the foundation of web development.</blockquote>
+</div>
+
+<div class="section" id="lists">
+<h2>Lists Example</h2>
+
+<h3>Ordered List</h3>
+<ol>
+<li>Learn HTML</li>
+<li>Learn CSS</li>
+<li>Learn JavaScript</li>
+</ol>
+
+<h3>Unordered List</h3>
+<ul>
+<li>Images</li>
+<li>Tables</li>
+<li>Forms</li>
+</ul>
+</div>
+
+<div class="section" id="images">
+<h2>Images Example</h2>
+<img src="images/image1.png" alt="Sample Image 1">
+<img src="images/image2.png" alt="Sample Image 2">
+<img src="images/image3.png" alt="Sample Image 3">
+</div>
+
+<div class="section" id="table">
+<h2>Table Example</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Topic</th>
+<th>Level</th>
+</tr>
+
+<tr>
+<td>HTML Basics</td>
+<td>Beginner</td>
+</tr>
+
+<tr>
+<td>Forms</td>
+<td>Intermediate</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section" id="form">
+<h2>Form Example</h2>
+
+<form>
+
+<label>Name:</label><br>
+<input type="text" placeholder="Enter your name"><br><br>
+
+<label>Email:</label><br>
+<input type="email" placeholder="Enter email"><br><br>
+
+<label>Gender:</label><br>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<br><br>
+
+<label>Skills:</label><br>
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+<br><br>
+
+<textarea placeholder="Write message"></textarea><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 HTML Learning Demo</p>
+</footer>
+
+</body>
+</html>

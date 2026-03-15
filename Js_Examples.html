@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Examples</title>
+    <script>
+        function Content(){
+            document.getElementById("paragraph").innerHTML = "Hello JavaScript!";
+        }
+    </script>
+</head>
+<body>
+    <h3 id="demo">JavaScript Can Change the Content of an HTML Element</h3>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+    <h4 id="style">JavaScript can change the style of HTML elements</h4>
+    <button type="button" onclick="document.getElementById('style').style.color = 'red'">Click Me!</button>
+
+    <h4 id ="hide">JS to hide Html Elements</h4>
+    <button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+    <h3>In Body JS</h3>
+    <p id="first"></p>
+    <script>
+        document.getElementById("first").innerHTML = "My First JavaScript";
+    </script>
+    
+    <h3>Head JS</h3>
+    <p id="paragraph">A paragraph</p>
+    <button type="button" onclick="Content()">Try Me!</button>
+
+    <h3>Outer JS </h3>
+    <p id="outer-JS">First Paragraph</p>
+    <button type="button" onclick="myFunction()">Try It!</button>
+    <script src="Js_Examples.js"></script>
+
+    <h3> Using Innertext</h3>
+    <p id="inner"></p>
+    <script>
+        document.getElementById("inner").innerText = "Using Innertext";
+    </script>
+
+    <h3>Using document.write()</h3>
+    <script>
+        document.write("5+6= " + (5+6));
+    </script>
+
+    <p id="operation">Using document.write() on button click</p>
+    <button type="button" onclick="document.write(5+6)">Try It!</button>
+
+    <p id="wind">Using window.alert on button click</p>
+    <button type="button" onclick="window.alert(5+6)">Try It!</button>
+
+    
+</body>
+</html>

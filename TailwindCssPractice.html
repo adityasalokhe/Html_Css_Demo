@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="columns-2 md:columns-4">
+                <div>
+                    <h1>This is Column 1</h1>
+                </div>
+                <div>
+                    <h1>This is Column 2</h1>
+                </div>
+                <div>
+                    <h1>This is Column 3</h1>
+                </div>
+                <div>
+                    <h1>This is Column 4</h1>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="pt-10">
+            <div class="inline">
+                <p>
+                    When controlling the flow of text, using the CSS property <span class="inline">display:
+                        inline</span> will cause the
+                    text inside the element to wrap normally.
+                </p>
+                <p>
+                    While using the property <span class="inline-block">display: inline-block</span> will wrap the
+                    element to prevent the
+                    text inside from extending beyond its parent.
+                </p>
+                <p>
+                    Lastly, using the property <span class="block">display: block</span> will put the element on its own
+                    line and fill its
+                    parent.
+                </p>
+            </div>
+        </section>
+        <section>
+            <img class="object-contain md:h-48 w-96 object-scale-down ..." src="images/ganpati.jpg" />
+        </section>
+        <hr>
+        <br><br>
+        <section>
+            <div class="columns-3">
+                <div class="relative size-32 bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute inset-x-0 top-0 h-16 ...">02</div>
+                </div>
+                <!-- Pin to top right corner -->
+                <div class="relative size-32 ... bg-red-300 text-center text-black-600 p-10">
+                    <div class="absolute top-0 right-0 size-16 ...">03</div>
+                </div>
+                <!-- Span left edge -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute inset-y-0 left-0 w-16 ...">04</div>
+                </div>
+                <!-- Fill entire parent -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute inset-0 ...">05</div>
+                </div>
+                <!-- Span right edge -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute inset-y-0 right-0 w-16 ...">06</div>
+                </div>
+                <!-- Pin to bottom left corner -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute bottom-0 left-0 size-16 ...">07</div>
+                </div>
+                <!-- Span bottom edge -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute inset-x-0 bottom-0 h-16 ...">08</div>
+                </div>
+                <!-- Pin to bottom right corner -->
+                <div class="relative size-32 ... bg-gray-300 text-center text-red-600 p-10">
+                    <div class="absolute right-0 bottom-0 size-16 ...">09</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
