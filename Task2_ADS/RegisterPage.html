@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Basic Information</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <main class="w-full max-w-4xl px-6">
+
+        <section>
+
+            <h1 class="text-3xl font-extrabold text-blue-600 tracking-wide mb-6">
+                Register
+            </h1>
+
+            <div class="w-full bg-gray-200 rounded-full h-3 mb-6">
+                <div id="progressBar" class="bg-blue-600 h-3 rounded-full" style="width:0%"></div>
+            </div>
+
+
+            <!-- STEP 1 -->
+            <div id="step1Container">
+
+                <h2 class="text-2xl font-semibold text-center mb-8 text-gray-700">
+                    Step 1
+                </h2>
+
+                <div class="bg-white p-10 rounded-xl shadow-lg">
+
+                    <div id="step1" class="grid md:grid-cols-2 gap-8">
+
+                        <input type="text" required placeholder="First Name *" class="inputField">
+
+                        <input type="text" required placeholder="Last Name *" class="inputField">
+
+                        <input type="email" required placeholder="Email Address *" class="inputField">
+
+                        <input type="tel" required pattern="[0-9]{10}" placeholder="Phone Number *" class="inputField">
+
+                        <input type="text" required placeholder="Address *" class="inputField md:col-span-2">
+
+                    </div>
+
+                    <button type="button" onclick="nextStep()"
+                        class="block mx-auto mt-6 px-8 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+            <div id="step2Container" class="hidden">
+
+                <h2 class="text-2xl font-semibold text-center mb-8 text-gray-700">
+                    Step 2
+                </h2>
+
+                <div class="bg-white p-10 rounded-xl shadow-lg">
+
+                    <div id="step2" class="grid md:grid-cols-2 gap-8">
+
+                        <input type="text" required placeholder="Business Name *" class="inputField">
+
+                        <input type="text" required placeholder="Business Type *" class="inputField">
+
+                        <input type="text" required placeholder="Business Category *" class="inputField">
+
+                        <input type="text" required placeholder="Business Description *" class="inputField">
+
+                    </div>
+
+                    <div class="flex justify-center gap-4 mt-6">
+
+                        <button type="button" onclick="prevStep()" class="px-6 py-2 border rounded-lg">
+                            Back
+                        </button>
+
+                        <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-lg">
+                            Submit
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <style>
+        .inputField {
+            width: 100%;
+            border-bottom: 2px solid #d1d5db;
+            outline: none;
+            padding: 8px 0;
+            font-size: 18px;
+            color: #1f2937;
+        }
+
+        .inputField:focus {
+            border-color: #2563eb;
+        }
+
+        .inputField::placeholder {
+            color: #9ca3af;
+        }
+    </style>
+
+
+    <script>
+
+        const inputs = document.querySelectorAll("input[required]")
+        const progressBar = document.getElementById("progressBar")
+
+        function updateProgress() {
+
+            let filled = 0
+
+            inputs.forEach(input => {
+                if (input.value.trim() !== "") {
+                    filled++
+                }
+            })
+
+            let percent = (filled / inputs.length) * 100
+            progressBar.style.width = percent + "%"
+
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener("input", updateProgress)
+        })
+
+
+        function nextStep() {
+
+            let step1Inputs = document.querySelectorAll("#step1 input")
+
+            for (let input of step1Inputs) {
+                if (!input.checkValidity()) {
+                    input.reportValidity()
+                    return
+                }
+            }
+
+            document.getElementById("step1Container").classList.add("hidden")
+            document.getElementById("step2Container").classList.remove("hidden")
+
+        }
+
+
+        function prevStep() {
+
+            document.getElementById("step1Container").classList.remove("hidden")
+            document.getElementById("step2Container").classList.add("hidden")
+
+        }
+
+    </script>
+
+</body>
+
+</html>
